@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - Yuri Fernando</title>
+  <meta name="description" content="Portfólio moderno com animações suaves, fundo animado e cartões 3D.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="perfil.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <noscript>
+    <div class="noscript">Este site usa JavaScript para animações. Ative o JavaScript para a melhor experiência.</div>
+  </noscript>
+
+  <main id="main" aria-labelledby="title">
+    <section id="profile" class="container" aria-labelledby="username">
+      <img id="avatar" src="perfil.png" 
+           alt="Foto de perfil" loading="lazy" />
+      <h1 id="username">Yuri Fernando</h1>
+      <p id="bio">
+        Programador iniciante, curioso por tecnologia e apaixonado por criar experiências web com HTML, CSS e JavaScript.
+      </p>
+
+      <div class="tech-tags" role="list" aria-label="Tecnologias">
+        <span role="listitem" class="tag">HTML</span>
+        <span role="listitem" class="tag">CSS</span>
+        <span role="listitem" class="tag">JavaScript</span>
+      </div>
+
+      <div class="social-buttons">
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://discord.com/" target="_blank" rel="noopener">Discord</a>
+        <a href="https://wa.me/5599999999999" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </section>
+    <section id="projects" class="container" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projetos em Destaque</h2>
+
+      <div class="projects-grid">
+        <article class="project-card" data-url="#" tabindex="0" aria-label="Mini Jogo: Clique Rápido">
+          <div class="glare"></div>
+          <div class="project-media">
+            <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=800&auto=format&fit=crop" 
+                 alt="Capa do jogo Clique Rápido" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <h3>Mini Jogo: Clique Rápido</h3>
+            <p>Teste sua velocidade de reação em um jogo simples e viciante.</p>
+            <div class="chips">
+              <span class="chip">Game</span><span class="chip">JS</span><span class="chip">Fun</span>
+            </div>
+            <button class="btn" data-action="start-game">Começar Jogo</button>
+            <p id="gameMessage" class="sr"></p>
+          </div>
+        </article>
+        <article class="project-card" data-url="https://github.com/" tabindex="0" aria-label="Repositórios no GitHub">
+          <div class="glare"></div>
+          <div class="project-media">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop" 
+                 alt="Código no editor representando repositórios GitHub" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <h3>Projetos no GitHub</h3>
+            <p>Explora códigos abertos e experimentos que venho construindo.</p>
+            <div class="chips">
+              <span class="chip">GitHub</span><span class="chip">Open Source</span><span class="chip">Portfolio</span>
+            </div>
+            <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">Ver GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="container footer">
+      <p>© <span id="year"></span> Yuri Fernando</p>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

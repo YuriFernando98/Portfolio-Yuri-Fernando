@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aviso - Yuri Ryu</title>
+  <meta name="description" content="Aviso de recurso ainda não disponível.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Ajuste do card de aviso */
+    #notice .project-card {
+      max-width: 900px;   /* mais largo que os cards normais */
+      margin: 0 auto;
+    }
+
+    /* Remover a área da imagem */
+    #notice .project-media {
+      display: none;
+    }
+
+    /* Ajuste do corpo do card */
+    #notice .project-body {
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    #notice .project-body h3 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    #notice .project-body p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    #notice .chips {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main id="main" aria-labelledby="title">
+    <section id="notice" class="container" aria-labelledby="notice-title">
+      <article class="project-card" tabindex="0" aria-label="Aviso: recurso não pronto">
+        <div class="glare"></div>
+        <div class="project-body">
+          <h3 id="notice-title">Ainda não está pronto 😅</h3>
+          <p>Por favor, volte ao <strong>Fale com Yuri</strong> ou retorne para o <strong>Portfolio</strong>.</p>
+          <div class="chips">
+            <span class="chip">Aviso</span><span class="chip">Em Breve</span>
+          </div>
+          <a href="../portfolio.html" class="btn">Voltar</a>
+          <p id="gameMessage" class="sr"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="aviso.js" defer></script>
+</body>
+</html>
