@@ -1,11 +1,9 @@
-// Utilidades
+
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-// Atualiza ano do rodapé
 $("#year").textContent = new Date().getFullYear();
 
-// Partículas decorativas (performáticas e simples)
 function createParticles(count = 28) {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReduced) return;
@@ -13,9 +11,8 @@ function createParticles(count = 28) {
   for (let i = 0; i < count; i++) {
     const p = document.createElement('span');
     p.className = 'particle';
-    // posições e variações
     const x = Math.random() * 100;
-    const dx = (Math.random() * 30 - 15) + 'px'; // leve drift
+    const dx = (Math.random() * 30 - 15) + 'px'; 
     const dur = (12 + Math.random() * 16).toFixed(2) + 's';
     const delay = (Math.random() * 8).toFixed(2) + 's';
     p.style.left = x + 'vw';
@@ -27,10 +24,9 @@ function createParticles(count = 28) {
   }
 }
 
-// Tilt 3D nos cards de projeto
 function enableTilt() {
   const isCoarse = window.matchMedia('(pointer: coarse)').matches;
-  if (isCoarse) return; // desabilita em telas touch
+  if (isCoarse) return; 
 
   const maxRotate = 10; // graus
   const cards = $$('.project-card');
@@ -46,7 +42,6 @@ function enableTilt() {
       const rotY = Math.max(Math.min(maxRotate * mx, maxRotate), -maxRotate);
       const rotX = Math.max(Math.min(-maxRotate * my, maxRotate), -maxRotate);
       card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(0)`;
-      // brilho acompanha o mouse
       if (glare) {
         const localX = e.clientX - rect.left;
         const localY = e.clientY - rect.top;
@@ -61,11 +56,9 @@ function enableTilt() {
 
     card.addEventListener('mousemove', handleMove);
     card.addEventListener('mouseleave', reset);
-    // acessibilidade: foco também dá leve destaque
     card.addEventListener('focus', () => (card.style.transform = 'translateY(-2px)'));
     card.addEventListener('blur', reset);
 
-    // Clique no card abre URL (se existir)
     card.addEventListener('click', (ev) => {
       const url = card.dataset.url;
       const isBtn = ev.target.closest('a,button');
@@ -81,7 +74,6 @@ function enableTilt() {
   });
 }
 
-// Revelar elementos ao entrar na viewport
 function enableReveal() {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -98,7 +90,6 @@ function enableReveal() {
   });
 }
 
-// Mini jogo de clique (exemplo simples)
 function startGame() {
   const msg = $('#gameMessage');
   let clicks = 0;
@@ -114,23 +105,18 @@ function startGame() {
   }, 3000);
 }
 
-// Seleciona todos os botões com data-action="start-game";
 document.querySelectorAll('[data-action="start-game"]').forEach(btn => {
   btn.addEventListener('click', () => {
-    // Redireciona para o painel de aviso
     window.location.href = 'aviso/aviso.html';
   });
 });
 
-// Função startGame (se você quiser expor alguma função JS para o HTML)
 function startGame() {
   window.location.href = 'aviso/aviso.html';
 }
 
-// Expor para o HTML do botão do jogo
 window.startGame = startGame;
 
-// Bootstrap
 document.addEventListener('DOMContentLoaded', () => {
   createParticles(36);
   enableTilt();
