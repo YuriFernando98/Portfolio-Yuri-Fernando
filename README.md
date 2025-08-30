@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="perfil.png" width="120" height="120" style="border-radius:50%; border:2px solid #dadada; box-shadow: 0 6px 20px rgba(0,0,0,0.35);" alt="Foto de perfil" />
+  <img src="perfi.png" width="120" height="120" style="border-radius:50%; border:2px solid #dadada; box-shadow: 0 6px 20px rgba(0,0,0,0.35);" alt="Foto de perfil" />
 
   <h1>Yuri Fernando</h1>
   <p>Programador iniciante, curioso por tecnologia e apaixonado por criar experiências web com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.</p>
