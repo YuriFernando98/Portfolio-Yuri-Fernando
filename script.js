@@ -107,12 +107,12 @@ function startGame() {
 
 document.querySelectorAll('[data-action="start-game"]').forEach(btn => {
   btn.addEventListener('click', () => {
-    window.location.href = 'aviso/aviso.html';
+    window.location.href = 'https://editor.p5js.org/YuriFernando98/full/dE7Q_j9EE';
   });
 });
 
 function startGame() {
-  window.location.href = 'aviso/aviso.html';
+  window.location.href = 'https://editor.p5js.org/YuriFernando98/full/dE7Q_j9EE';
 }
 
 window.startGame = startGame;
